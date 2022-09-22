@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="sass/style.css">
+  <title>LOREMIPSUM.NET</title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+        <a class="logo" href="#">
+            LoremIpsum.<span class="logo__text text--colored">Net</span>
+        </a>
+        <nav class="nav">
+            <ul class="nav-items">
+                <li class="nav-items__item"><a class="nav-items__link nav__link--active" href="#">Бизнес</a></li>
+                <li class="nav-items__item"><a class="nav-items__link" href="#">О нас</a></li>
+                <li class="nav-items__item"><a class="nav-items__link" href="#">Цены</a></li>
+                <li class="nav-items__item"><a class="nav-items__link" href="#">Оформить заказ</a></li>
+            </ul>
+        </nav>
+        <span class="hamburger nav-toggler">
+            <span class="hamburger__line"></span>
+        </span>
+    </div>
+  </header>
+  <main class="main">
+    <section class="slide">
+        <div class="wrapper">
+            <div class="slide__content">
+                <h1 class="slide__named"><span class="slide__named text--colored">Lorem ipsum</span> dolor sit<br>amet consectetur <span class="slide__named text--colored">adipiscing</span></h1>
+                <div class="slide__description">
+                    <p classs="slide__description-text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+                    <ul class="slide-ul">
+                        <li class="slide-ul__item"> - Totam rem aperiam eaque ipsa</li>
+                        <li class="slide-ul__item"> - Sit voluptatem accusantium doloremque laudantium</li>
+                        <li class="slide-ul__item"> - Sed ut perspiciatis, unde omnis iste natus error</li>
+                    </ul>
+                </div>
+                <div class="slide__buttons-block">
+                    <button class="button button--colored">заказать</button>
+                    <button class="button">подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ordering">
+        <div class="wrapper">
+            <div class="ordering__content">
+                <h2 class="ordering__named">Оформление  <span class="ordering__named text--colored">  Заказа</span></h2>
+                <div class="ordering__description">
+                    Перед заполнением формы ознакомьтесь с нашей схемой работы!
+                </div>
+                <div class="steps">
+                    <div class="steps__item">
+                        <div class="steps__item-wrapper">
+                        <svg class="steps__item-img icon-serach">
+                            <use xlink:href="images/sprite-icons.svg#search"></use>
+                        </svg>
+                        </div>
+                        <div class="steps__item-text">Lorem ipsum dolorsit amet</div>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-wrapper">
+                        <svg class="steps__item-img icon-procent">
+                            <use xlink:href="images/sprite-icons.svg#procent"></use>
+                        </svg>
+                        </div>
+                        <div class="steps__item-text">Сonsecteturadipiscing elit</div>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-wrapper">
+                        <svg class="steps__item-img icon-adddoc">
+                            <use xlink:href="images/sprite-icons.svg#adddoc"></use>
+                        </svg>
+                        </div>
+                        <div class="steps__item-text">Sed do eiusmod tempor</div>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-wrapper">
+                        <svg class="steps__item-img icon-mail">
+                            <use xlink:href="images/sprite-icons.svg#mail"></use>
+                        </svg>
+                        </div>
+                        <div class="steps__item-text">Esse cillum doloreeu fugiat</div>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-wrapper">
+                        <svg class="steps__item-img icon-money">
+                            <use xlink:href="images/sprite-icons.svg#money"></use>
+                        </svg>
+                        </div>
+                        <div class="steps__item-text">Excepteur sint occaecat cupidatat non proident</div>
+                    </div>
+                </div>
+                <div class="ordering__form-wrapper">
+                    <form action method="POST" class="form ordering-form">
+                        <div class="select-wrapper">
+                            <select name="ordering-items" id="choose-item" class="form-select">
+                                <option class="form-select__item" value="" hidden disabled selected>Выберите тип системы</option>
+                                <option class="form-select__item" value="item-1">Sed ut perspiciatis</option>
+                                <option class="form-select__item" value="item-2">Nemo enim ipsam</option>
+                                <option class="form-select__item" value="item-3">Et harum quidem</option>
+                                <option class="form-select__item" value="item-4">Temporibus autem</option>
+                                <option class="form-select__item" value="item-5">Itaque earum rerum</option>
+                                <option class="form-select__item" value="item-6">Sed ut perspiciatis</option>
+                                <option class="form-select__item" value="item-7">Nemo enim ipsam</option>
+                                <option class="form-select__item" value="item-8">Et harum quidem</option>
+                                <option class="form-select__item" value="item-9">Temporibus autem</option>
+                                <option class="form-select__item" value="item-10">Itaque earum rerum</option>
+                            </select>
+                        </div>
+                        <input type="email" class="form-select__input" placeholder="Ваш e-mail" id="email">
+                        <input type="text" class="form-select__input" placeholder="Ваше имя" id="name">
+                        <div class="slider__wrapper">
+                            <div class="slider__description">Sed ut perspiciatis, unde omnis iste natus <span class="wrapper__result"><span id="slider-result"></span>%</span></div>
+                            <input class="form-select__input slider" type="range" min="1" max="100" value="75" id="range-slider">
+                        </div>
+                        <div class="input__wrapper ">
+                            <input name="file" type="file" name="file" id="input__file" class="input__file" multiple>
+                            <label for="input__file" class="input__file-button button button--bordered">
+                                <span class="input__file-icon-wrapper">
+                                    <svg class="input__file-icon">
+                                        <use xlink:href="images/sprite-icons.svg#addfile"></use>
+                                    </svg>
+                                </span>
+                                <span class="input__file-button-text">Прикрепить файл</span>
+                            </label>
+                        </div>
+                        <div class="form-select__wrapper-button">
+                            <button type="submit" class="button form-select__button button--colored">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+        <div class="copyright__wrapper">
+            <div class="copyright">
+                © 2018 LOREMIPSUM.NET Все права защищены.
+            </div>
+        </div>
+        <span class="separator">|</span>
+        <ul class="footer-ul payment-methods">
+            <li class="footer-ul__item payment-methods__item">
+                <svg class="footer-ul__item-icon">
+                    <use xlink:href="images/sprite-icons.svg#qiwi"></use>
+                </svg> 
+                Qiwi wallet
+            </li> 
+            <li class="footer-ul__item payment-methods__item"> 
+                <svg class="footer-ul__item-icon">
+                    <use xlink:href="images/sprite-icons.svg#yandex-money"></use>
+                </svg>Yandex Money
+            </li> 
+            <li class="footer-ul__item payment-methods__item">
+                <svg class="footer-ul__item-icon">
+                    <use xlink:href="images/sprite-icons.svg#webmoney"></use>
+                </svg> Web Money
+            </li> 
+        </ul>   
+        <span class="separator">|</span>   
+        <ul class="footer-ul link-send-message">
+            <li class="footer-ul__item link-send-message__item"> 
+                <svg class="footer-ul__item-icon">
+                    <use xlink:href="images/sprite-icons.svg#mail"></use>
+                </svg>
+                <a class="footer-ul__item-link" href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+            </li>
+            <li class="footer-ul__item link-send-message__item">
+                    <svg class="footer-ul__item-icon">
+                        <use xlink:href="images/sprite-icons.svg#vk"></use>
+                    </svg>
+                <a class="footer-ul__item-link" href="#">Мы вконтакте</a>
+            </li>
+        </ul>            
+    </div>
+</footer>
+<script async src="js/mobile-menu.js"></script>
+<script async src="js/range-slider.js"></script>
+<script async src="js/select-list.js"></script>
+</body>
+</html>

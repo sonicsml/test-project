@@ -1,0 +1,32 @@
+.button {
+    border-width: 1px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    background-color: $button-bg-color;
+    padding: 13px 0;
+    width: 183px;
+    &:hover {
+        @extend %transition;
+        background-color: $border-step-img;
+        color: $link;
+    }
+}
+.button--colored {
+    background-color: $button-bg-colored;
+    color: $link;
+    border: 1px solid $link;
+}
+.button--bordered {
+    border: 1px solid $button-bg-colored;
+}
+.form-button {
+    max-width: 370px;
+    height: 48px;
+    margin: 15px 0;
+}

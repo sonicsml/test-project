@@ -1,0 +1,356 @@
+.ordering {
+    background: url('../images/bg-form-offer.jpg');
+    padding: 90px 0 150px;
+    color: $link;
+    @include media-mobile {
+        padding: 20px 0;
+    }
+    .ordering__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .ordering__named {
+            @include media-mobile {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        .ordering__description {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 22px;
+            @include media-mobile {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 25px 0 20px;
+    @include media-laptop {
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .steps__item {
+        width: 210px;
+        padding: 10px;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 1.9rem;   
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 6px;
+            background: url(../images/dott-group.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 65px;
+            left: 180px;
+            @include media-laptop {
+                display: none;
+            }
+        }
+        &:last-child::after {
+            display: none;
+        }
+        .steps__item-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background: $button-bg-colored;
+            border: 5px solid $border-step-img;
+            width: 95px;
+            height: 95px;
+            margin: auto;
+            margin-bottom: 20px;
+            & .steps__item-img {
+                fill: $link;
+                &.icon-mail {
+                    width: 38px;
+                }
+                &.icon-serach{
+                    width: 33px;
+                }
+                &.icon-procent,
+                &.icon-adddoc,
+                &.icon-money  {
+                    width: 54px;
+                }
+            }
+            
+        }
+    }
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    @include media-laptop {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    @include media-mobile {
+        margin-top: 0;
+    }
+    .form-select__input,
+    .form-select__input {
+        background: $color-bg-input;
+        border: 1px solid $link;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 12px;
+        width: 370px;
+        margin: 15px 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        &::placeholder {
+            color: $color-text-input;
+            @include font(1.8rem, 2.2rem, normal);
+        }
+        @include media-laptop {
+            margin: 15px 0 0;
+        }
+        @include media-mobile {
+            width: 300px;
+        }
+    }
+    .select-wrapper {
+        position: relative;
+        &.select-wrapper select {
+        display: none;
+        }
+    }
+    .select-selected {
+        background: $color-bg-input;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 12px;
+        width: 370px;
+        color: $color-text-input;
+        margin: 0;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+        @include font(1.8rem, 2.2rem, normal);
+        @include media-mobile {
+            width: 300px;
+            margin-top: 20px;
+        }
+        &.select-selected-bottom-square {
+            background-color: $color-bg-select;
+            color:$link;
+            border-radius: 3px 3px 0 0;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 45%;
+            right: 10px;
+            width: 9px;
+            height: 6px;
+            background-image: url(../images/arrows.png);
+            background-position: -2px -1px;
+            @include media-mobile {
+                top: 70%;
+            }
+        }
+        &.select-arrow-active:after {
+            background-image: url(../images/arrows.png);
+            background-position: -2px -8px;
+            top: 45%;
+            @include media-mobile {
+                top: 70%;
+            }
+        }
+    }
+    .select-items {
+        border-radius: 0px 0px 3px 3px;
+        height: 170px;
+        padding: 10px;
+        overflow-y: auto;
+        position: absolute;
+        background-color: $color-text-input;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        border: 1px solid $color-bg-select;
+        border-top: 0;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3.4rem;
+        & .selet-items__item {
+            cursor: pointer;
+            user-select: none;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 3.4rem;
+        }
+    }
+    .select-hide {
+        display: none;
+    }
+    .select-items div:hover, .same-as-selected {
+        color:$color-button-range-slider;
+    }
+    .select-items::-webkit-scrollbar {
+        width: 7px;
+    }
+    .select-items::-webkit-scrollbar-track {
+        background:  $color-bg-select-scroll;
+        border-radius: 3px;
+
+    }
+    .select-items::-webkit-scrollbar-thumb {
+        background: $button-bg-colored;
+        border-radius: 3px; 
+        
+    }
+    .form-select__button {
+        padding: 15px 145px;
+        width: auto;
+        &:hover {
+            @extend %transition; 
+        }
+        @include media-mobile {
+            max-width: 300px;
+            width: 100%;
+            padding: 15px 0;
+        }
+    }
+    .input__wrapper {
+        color: $color-text-input;
+        background-color: $link;
+        border-radius: 3px;
+        margin-top: 15px;
+        .input__file {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+        .input__file-icon-wrapper {
+            margin-right: 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+        .input__file-icon {
+            width: 17.15px;
+            height: 20px;
+            fill: $color-text-input;
+        }
+        .input__file-button-text {
+            line-height: 1;
+            margin-top: 0.01em;
+        }
+        .input__file-button {
+            width: 370px;
+            height: 48px;
+            padding: 0 60px;
+            border-radius: 3px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            &:hover .input__file-icon {
+                @extend %transition; 
+                fill:$link;
+            }
+            @include media-mobile {
+                width: 300px;
+            }
+        }
+    }
+    .form-select__wrapper-button {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media-laptop {
+            width: 300px;
+            margin-top: 20px;
+        }
+    }
+}
+.slider__wrapper {
+    width: 768px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: $link;
+    margin-top: 15px;
+    @include media-tablet {
+        width: 100%;
+        margin-top: 10px;
+    }
+    @include media-mobile {
+        width: 300px;
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
+    .slider__description {
+        display: flex;
+        justify-content: space-between;
+    }
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: $color-bg-input;
+        outline: none;
+        padding: 0;
+    }
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $color-button-range-slider;
+        border: 3px solid $border-step-img;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: $color-button-range-slider;
+        border: 3px solid $border-step-img;
+        cursor: pointer;
+    }
+}

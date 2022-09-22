@@ -1,0 +1,33 @@
+.slide {
+    background: url('../images/bg-slide.jpg');
+    padding: 175px 0 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include media-mobile {
+        padding: 120px 0 50px 0;
+    }
+    .slide__content .slide__named {
+        max-width: 780px;
+        white-space: inherit;
+        line-height: 1.24em;
+        @include media-mobile {
+            font-size: 3.6rem;
+        }
+    }
+    .slide__buttons-block .button {
+        margin-top: 40px;
+        margin-right: 30px;
+        @include media-mobile {
+            margin: 10px;
+        }
+    }
+
+    .slide__description {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin: 90px 0 40px;
+        p {
+            font-weight: bold;
+        }
+    }
+}

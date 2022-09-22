@@ -1,0 +1,21 @@
+{
+  "name": "test-poject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonicsml/test-poject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonicsml/test-poject/issues"
+  },
+  "homepage": "https://github.com/sonicsml/test-poject#readme"
+}
